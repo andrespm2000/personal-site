@@ -1,0 +1,119 @@
+---
+import { Image } from 'astro:assets';
+import H1 from "../components/h1.astro";
+import InfoLayout from "../layouts/InfoLayout.astro";
+import malagasyTTSLogo from "../assets/malagasyttslogo.png";
+import bullyPicture from "../assets/bully-algorithm.png";
+import cloudPicture from "../assets/cloud.png";
+import databasePicture from "../assets/database.jpg";
+import hedgehogPicture from "../assets/hedgehog.svg";
+import odometryPicture from "../assets/odometry.png";
+import openCVPicture from "../assets/OpenCV.png";
+import pactometroPicture from "../assets/pacto.png";
+import reactPicture from "../assets/react.png";
+import socketPicture from "../assets/socket.jpg";
+import trainPicture from "../assets/train.jpg";
+import tuxPicture from "../assets/tux.jpg";
+
+const projects = [
+     {
+          title: "Malagasy TTS",
+          description: "Select and translate any text on the web into Malagasy.",
+          image: malagasyTTSLogo,
+          link: "https://github.com/andrespm2000/MalagasyTTS-Extension"
+     },
+     {
+          title: "Bully algorithm",
+          description: "Bully algorithm implementation for distributed systems, built with Java.",
+          image: bullyPicture,
+          link: "https://github.com/andrespm2000/ProyectoFinalAlgoritmoBully"
+     },
+     {
+          title: "Text recognition",
+          description: "Text recognition tool for images, built with Python and OpenCV.",
+          image: openCVPicture,
+          link: "https://github.com/andrespm2000/reconocimiento-texto"
+     },
+     {
+          title: "Odometry simulator",
+          description: "Robot odometry simulator for a differential drive robot, built with Python.",
+          image: odometryPicture,
+          link: "https://github.com/andrespm2000/simulador-odometria-diferencial"
+     },
+     {
+          title: "QieServices",
+          description: "Scripts for a mock university faculty management system",
+          image: tuxPicture,
+          link: "https://github.com/andrespm2000/qieservices-server"
+     },
+     {
+          title: "ChronoCloud",
+          description: "Website for the fictional product ChronoCloud, a cloud memory storage service.",
+          image: cloudPicture,
+          link: "https://github.com/andrespm2000/ChronoCloud"
+     },
+     {
+          title: "Pactómetro",
+          description: "General election pact simulation tool built with WPF",
+          image: pactometroPicture,
+          link: "https://github.com/andrespm2000/pactometro"
+     },
+     {
+          title: "Network Sockets",
+          description: "C sockets implementation for a client-server quiz game",
+          image: socketPicture,
+          link: "https://github.com/andrespm2000/Sockets-Redes-I"
+     },
+     {
+          title: "Locomotion for Windows",
+          description: "Multithreaded train simulation made with C, designed for Windows.",
+          image: trainPicture,
+          link: "https://github.com/andrespm2000/LocomoWin"
+     },
+     {
+          title: "Locomotion",
+          description: "Multithreaded train simulation made with C, designed for Linux.",
+          image: trainPicture,
+          link: "https://github.com/andrespm2000/locomo"
+     },
+     {
+          title: "Hedgehog Site",
+          description: "Website made with Go",
+          image: hedgehogPicture,
+          link: "https://github.com/andrespm2000/hedgehog-site"
+     },
+     {
+          title: "Proyecto Ikea",
+          description: "Database system implementation for an IKEA-like store, including backend and frontend components.",
+          image: databasePicture,
+          link: "https://github.com/andrespm2000/Proyecto-Ikea"
+     },
+     {
+          title: "React Phone Store",
+          description: "Phone store built with React, showcasing product listings and a shopping cart.",
+          image: reactPicture,
+          link: "https://github.com/andrespm2000/react-phone-store"
+     },
+     ];
+---
+
+<InfoLayout>
+     <div class="p-4 sm:pt-8 sm:px-12 pb-20 min-h-dvh">
+          <H1> Projects </H1>
+
+          <ul class="mt-4 sm:mt-12 grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-16 sm:gap-8">
+               {projects.map((project) => (
+                    <li>
+                         <Image src={project.image} alt={project.title} class="aspect-[1/1] object-center object-cover rounded-lg shadow-lg mb-4 sm:mb-0 sm:mr-4" />
+                         <div class="p-1 sm:p-2">
+                              <h2 class="text-base text-zinc-100">{project.title}</h2>
+                              <p class="text-sm text-zinc-400 text-balance">{project.description}</p>
+                              <a href={project.link} class="mt-2 inline-block text-sm text-zinc-300 hover:text-zinc-50 transition-colors duration-200">
+                                   View Project
+                              </a>
+                         </div>
+                    </li>
+               ))}
+          </ul>
+     </div>
+</InfoLayout>

@@ -1,0 +1,202 @@
+---
+import H1 from "../components/h1.astro";
+import InfoLayout from "../layouts/InfoLayout.astro";
+import Timeline from "../timeline/timeline";
+import AssemblyIcon from "../assets/assembly.svg";
+import CIcon from "../assets/c.svg";
+import CSharpIcon from "../assets/csharp.svg";
+import CppIcon from "../assets/cpp.svg";
+import CiscoIcon from "../assets/cisco.svg";
+import GoIcon from "../assets/go.svg";
+import GcpIcon from "../assets/gcp.svg";
+import HTMLIcon from "../assets/html.svg";
+import JavaIcon from "../assets/java.svg";
+import LinuxIcon from "../assets/linux.svg";
+import MLFlowIcon from "../assets/mlflow.svg";
+import MongoDBIcon from "../assets/mongodb.svg";
+import MySQLIcon from "../assets/mysql.svg";
+import PostgreSQLIcon from "../assets/postgresql.svg";
+import PythonIcon from "../assets/python.svg";
+import ReactIcon from "../assets/react.svg";
+import SQLServerIcon from "../assets/sql-server.svg";
+
+
+const timelineItems = [
+  {
+    icon: CIcon.src,
+    iconBg: "cd-timeline__img--picture",
+    title: "Data structure implementation",
+    date: "2018"
+  },
+  {
+    icon: AssemblyIcon.src,
+    iconBg: "cd-timeline__img--movie",
+    title: "Projectile coordinates calculator",
+    date: "2019"
+  },
+  {
+    icon: LinuxIcon.src,
+    iconBg: "cd-timeline__img--picture",
+    title: "Peppermint distro configuration and kernel compilation",
+    date: "2020"
+  },
+  {
+    icon: AssemblyIcon.src,
+    iconBg: "cd-timeline__img--movie",
+    title: "Projectile coordinates calculator",
+    date: "2018"
+  },
+  {
+    icon: CiscoIcon.src,
+    iconBg: "cd-timeline__img--picture",
+    title: "Mock network deployment on Packet Tracer",
+    date: "2021"
+  },
+  {
+    icon: PostgreSQLIcon.src,
+    iconBg: "cd-timeline__img--movie",
+    title: "Database system implementation for IKEA-like store",
+    date: "2021"
+  },
+  {
+    icon: GoIcon.src,
+    iconBg: "cd-timeline__img--picture",
+    title: "Test website using Go",
+    date: "2022"
+  },
+  {
+    icon: LinuxIcon.src,
+    iconBg: "cd-timeline__img--movie",
+    title: "Linux system management and configuration",
+    date: "2022"
+  },
+  {
+    icon: CIcon.src,
+    iconBg: "cd-timeline__img--picture",
+    title: "Bowling simulation using C and system interrupts",
+    date: "2022"
+  },
+  {
+    icon: MySQLIcon.src,
+    iconBg: "cd-timeline__img--movie",
+    title: "Bookstore database mock system",
+    date: "2023"
+  },
+  {
+    icon: CIcon.src,
+    iconBg: "cd-timeline__img--picture",
+    title: "Multithreaded train game using C",
+    date: "2023"
+  },
+  {
+    icon: AssemblyIcon.src,
+    iconBg: "cd-timeline__img--movie",
+    title: "Matrix calculator",
+    date: "2023"
+  },
+    {
+    icon: CSharpIcon.src,
+    iconBg: "cd-timeline__img--picture",
+    title: "General elections simulation using WPF",
+    date: "2023"
+  },
+  {
+    icon: LinuxIcon.src,
+    iconBg: "cd-timeline__img--movie",
+    title: "Faculty mock system implementation",
+    date: "2024"
+  },
+    {
+    icon: HTMLIcon.src,
+    iconBg: "cd-timeline__img--picture",
+    title: "'ChronoCloud' mock product webpage",
+    date: "2024"
+  },
+  {
+    icon: AssemblyIcon.src,
+    iconBg: "cd-timeline__img--movie",
+    title: "Assembly calculator cycle optimization",
+    date: "2024"
+  },
+    {
+    icon: GcpIcon.src,
+    iconBg: "cd-timeline__img--picture",
+    title: "GCP Spanner database read/write optimization",
+    date: "2024"
+  },
+  {
+    icon: PythonIcon.src,
+    iconBg: "cd-timeline__img--movie",
+    title: "BIN number ETL pipeline",
+    date: "2024"
+  },
+    {
+    icon: MLFlowIcon.src,
+    iconBg: "cd-timeline__img--picture",
+    title: "MlFlow model stats pipeline using Python, Pandas, SQLServer and Streamlit",
+    date: "2024"
+  },
+  {
+    icon: CppIcon.src,
+    iconBg: "cd-timeline__img--movie",
+    title: "Unity game project: Avocado adventures",
+    date: "2024"
+  },
+    {
+    icon: PythonIcon.src,
+    iconBg: "cd-timeline__img--picture",
+    title: "A* implementation for optimal Tetris piece placement",
+    date: "2024"
+  },
+  {
+    icon: PythonIcon.src,
+    iconBg: "cd-timeline__img--movie",
+    title: "Robot odometry simulation",
+    date: "2025"
+  },
+    {
+    icon: PythonIcon.src,
+    iconBg: "cd-timeline__img--picture",
+    title: "Text recognition using Python and OpenCV",
+    date: "2025"
+  },
+  {
+    icon: PythonIcon.src,
+    iconBg: "cd-timeline__img--movie",
+    title: "Roomba controller",
+    date: "2025"
+  },
+    {
+    icon: JavaIcon.src,
+    iconBg: "cd-timeline__img--picture",
+    title: "Bully algorithm implementation",
+    date: "2025"
+  },
+  {
+    icon: ReactIcon.src,
+    iconBg: "cd-timeline__img--movie",
+    title: "MalagasyTTS, using Plasmo and Python",
+    date: "2025"
+  },
+];
+---
+
+<InfoLayout>
+     <div class="p-4 sm:pt-8 sm:px-12 pb-20 min-h-dvh flex flex-col justify-between gap-32">
+          <div class="space-y-4 sm:space-y-12">
+               <H1> Andrés Perdomo Martínez </H1>
+
+               <p class="text-xl xl:text-2xl text-zinc-500 text-balance">
+                    Computer Engineer with a passion for data engineering and analysis.
+                    Looking for dynamic environments where I can bring new ideas, put my skills to use, and continue learning.
+                    Strong aptitudes for communication, teamwork, adaptability, problem-solving, organization, proactivity, and self-learning.
+               </p>
+          </div>
+
+          <div class="space-y-2 text-base sm:text-lg">
+               <h1 class="px-4 text-zinc-400 underline underline-offset-4 decoration-zinc-500">Skill timeline</h1>
+
+               <Timeline items={timelineItems} containerClass="" client:load/>
+          </div>
+     </div>
+</InfoLayout>
